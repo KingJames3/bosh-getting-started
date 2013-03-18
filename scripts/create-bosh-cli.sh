@@ -44,7 +44,7 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install build-essential libsqlite3-dev curl rsync git-core \
-libmysqlclient-dev libxml2-dev libxslt-dev libpq-dev genisoimage ruby1.9.1-dev mkpasswd \
+libmysqlclient-dev libxml2-dev libxslt1-dev libpq-dev genisoimage ruby1.9.1-dev \
 debootstrap kpartx qemu -y
 
 echo "install: --no-ri --no-rdoc" > /etc/gemrc
