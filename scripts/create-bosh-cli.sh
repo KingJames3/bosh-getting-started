@@ -44,7 +44,7 @@ fi
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install build-essential libsqlite3-dev curl rsync git-core \
-libmysqlclient-dev libxml2-dev libxslt1-dev libpq-dev genisoimage ruby1.9.1-dev \
+libmysqlclient-dev libxml2-dev libxslt1-dev libpq-dev genisoimage ruby1.9.1-dev mkpasswd \
 debootstrap kpartx qemu -y
 
 echo "install: --no-ri --no-rdoc" > /etc/gemrc
@@ -56,7 +56,7 @@ else
   curl -L get.rvm.io | bash -s stable
   source /etc/profile.d/rvm.sh
 fi
-command rvm install 1.9.3 # oh god this takes a long time
+command rvm install 1.9.3-p374 # oh god this takes a long time
 rvm 1.9.3
 rvm alias create default 1.9.3
 gem install bundler --no-ri --no-rdoc
